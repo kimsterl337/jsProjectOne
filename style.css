@@ -24,3 +24,8 @@ ul, li {
 	width: 20%;
 }
 
+.container p {
+	font-size: 20px;
+	color: Green;
+	font-weight: bold;	
+}

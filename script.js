@@ -7,6 +7,8 @@ let arrayItemsTotal = [];
 let counter = 0;
 let totalSum = 0;
 
+
+
 $('form').on('submit',function(){
 
 	event.preventDefault();
@@ -14,6 +16,8 @@ $('form').on('submit',function(){
 	var tempItemCost = parseInt($('#idItemCost').val());
 	var tempItemCount = parseInt($('#idItemCount').val());
 	var tempItemTotal = tempItemCount * tempItemCost;
+	var tempItemTax = 1 + parseFloat($('#idItemTax').val());
+	console.log(tempItemTax);
 	let runningTotal = 0;
 	let runningCount = 0;
 
@@ -30,7 +34,7 @@ $('form').on('submit',function(){
 		}
 
 	
-	updateTotal(runningCount, runningTotal);
+	updateTotal(runningCount, runningTotal, tempItemTax);
 
 	counter = counter + 1;
 	
@@ -45,7 +49,7 @@ $('form').on('submit',function(){
 $('.item-delete ul').on('click','.btn-delete',function(){
 
 	var deleteButtonVal = $(this).attr('id');
-	console.log(deleteButtonVal);
+	var tempItemTax = 1 + parseFloat($('#idItemTax').val());
 	let runningTotal = 0;
 	let runningCount = 0;
 
@@ -87,7 +91,7 @@ $('.item-delete ul').on('click','.btn-delete',function(){
 		runningCount = runningCount + (arrayItemsCount[i]);
 		}
 
-	updateTotal(runningCount, runningTotal);
+	updateTotal(runningCount, runningTotal, tempItemTax);
 
 	counter = counter - 1;
 
@@ -110,9 +114,10 @@ function listAppend (count, item, cost, total) {
 	$('.item-total ul').append(`<li id=total${counter}>${total[counter]}</li>`);
 }
 
-function updateTotal (count, total) {
+function updateTotal (count, total, tax) {
 	$('.item-count p').html(count);
 	$('.item-total p').html(total);
+	$('#afterTax').html((total * tax).toFixed(2));
 	$('.item-cost p').html((total/count).toFixed(2));
 }
 
