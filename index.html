@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Invocing System</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Invoicing System</h1>
+	<div class="wrapper">
+		<div class="inputs">
+			<form>
+				<p>Item Name</p>
+				<input type="text" name="itemName" id='idItemName'>
+				<p>Item Count</p>
+				<input type="text" name="itemCount" id='idItemCount'>
+				<p>Item Cost</p>
+				<input type="text" name="itemCost" id="idItemCost">
+				<p>First Name</p>
+				<input type="text" name="firstName" id="idFirstName">
+				<p>Last Name</p>
+				<input type="text" name="lastName" id="idLastName">
+				<p>Address</p>
+				<input type="text" name="address" id="idAddress">
+				<p>City</p>
+				<input type="text" name="city" id="idCity">
+				<p>Province</p>
+				<input type="text" name="province" id="idProvince">
+				<p>Postal Code</p>
+				<input type="text" name="postalCode" id="idPostalCode">
+				<button class="btn-submit"><i class="fas fa-play"></i>Enter</button>
+			</form>
+		</div>
+		<div class="container">
+			<div class="clientInfo">
+				<h2>Client Information</h2>
+				<p class= "clientName"></p>
+				<p class= "clientFirstAddress"></p>
+				<p class= "clientSecondAddress"></p>
+			</div>
+			<h2>Inventory Lists</h2>
+			<div class="inventory">
+				<div class="item-delete">
+					<h3>Delete</h3>
+					<ul>
+					</ul>
+				</div>
+				<div class="item-lists">
+					<h3>Items</h3>
+					<ul>
+					</ul>
+					<p>Total</p>
+				</div>
+				<div class="item-count">
+					<h3># Items</h3>
+					<ul>
+					</ul>
+					<p>0.00</p>
+				</div>
+				<div class="item-cost">
+					<h3>$ Unit</h3>
+					<ul>
+					</ul>
+					<p>0.00</p>
+				</div>
+				<div class="item-total">
+					<h3>Total</h3>
+					<ul>
+					</ul>
+					<p>0.00</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script> 
+</body>
+</html>

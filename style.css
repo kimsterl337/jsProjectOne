@@ -1,0 +1,26 @@
+ul, li {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.inputs {
+	width: 25%;
+}
+
+.container {
+	width: 75%;
+}
+
+.inventory {
+	display: flex;
+}
+
+.item-delete, .item-total, .item-count, .item-lists, .item-cost {
+	width: 20%;
+}
+
